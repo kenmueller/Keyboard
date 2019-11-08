@@ -10,7 +10,7 @@ public struct KeyboardResponder<Content: View>: View {
 	private var content: Content?
 	
 	public init(
-		animation: Animation? = .easeIn,
+		animation: Animation? = Keyboard.defaultAnimation,
 		@ViewBuilder content: @escaping (CGFloat) -> Content
 	) {
 		self.animation = animation
@@ -18,7 +18,7 @@ public struct KeyboardResponder<Content: View>: View {
 	}
 	
 	public init(
-		animation: Animation = .easeIn,
+		animation: Animation = Keyboard.defaultAnimation,
 		@ViewBuilder content: () -> Content
 	) {
 		self.animation = animation
